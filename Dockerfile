@@ -4,11 +4,13 @@ FROM node:20-alpine
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Copy package.json and package-lock.json to install dependencies
 COPY my-app/package.json my-app/package-lock.json ./
-RUN npm install && npm start
 
-# Copy the rest of the application code
+# Install only production dependencies, ignoring optional dependencies to avoid issues
+RUN npm ci --only=production --omit=optional
+
+# Copy the rest of the application code after dependencies are installed
 COPY my-app/ ./
 
 # Expose the application port
@@ -16,3 +18,4 @@ EXPOSE 8000
 
 # Define the command to run your application
 CMD ["npm", "start"]
+
