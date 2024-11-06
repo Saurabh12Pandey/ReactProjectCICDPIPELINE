@@ -6,10 +6,10 @@ WORKDIR /app
 
 # Copy package.json and install dependencies
 COPY my-app/package.json my-app/package-lock.json ./
-RUN npm ci
+RUN npm install
 
 # Copy the rest of the application code
-COPY my-app/app
+COPY my-app/ ./
 
 # Expose the application port
 EXPOSE 8000
