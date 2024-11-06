@@ -5,7 +5,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy package.json and install dependencies
-COPY my-app/package.json .
+COPY my-app/package.json my-app/package-lock.json ./
 RUN npm install
 
 # Copy the rest of the application code
