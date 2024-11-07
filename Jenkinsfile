@@ -27,7 +27,7 @@ pipeline {
         }
         stage("deploy"){
             steps{
-                sh 'docker run -d -p 4000:3000 sp8970196621/react-app:latest'
+                sh 'docker run -d -p 8000:3000 sp8970196621/react-app:latest'
             }
         }
     }
