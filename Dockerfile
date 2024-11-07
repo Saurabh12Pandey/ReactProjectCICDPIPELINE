@@ -13,9 +13,6 @@ RUN npm install -g npm@10.9.0
 # Copy the rest of the application code to the working directory
 COPY my-app/ ./
 
-# Verify if react-scripts is installed
-RUN npm list react-scripts
-
 # Build the React application for production
 RUN npm run build
 
