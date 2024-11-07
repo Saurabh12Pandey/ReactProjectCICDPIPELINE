@@ -8,7 +8,7 @@ WORKDIR /app
 COPY my-app/package.json my-app/package-lock.json ./
 
 # Install only production dependencies, ignoring optional dependencies to avoid issues
-RUN npm install -g npm@10.9.0 --production
+RUN npm install -g npm@10.9.0 
 
 # Copy the rest of the application code after dependencies are installed
 COPY my-app/ ./
