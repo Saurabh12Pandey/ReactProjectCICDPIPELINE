@@ -8,7 +8,7 @@ WORKDIR /app
 COPY my-app/package.json my-app/package-lock.json ./
 
 # Install dependencies including react-scripts
-RUN npm install --legacy-peer-deps
+RUN npm install -g npm@10.9.0
 
 # Copy the rest of the application code to the working directory
 COPY my-app/ ./
