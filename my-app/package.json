@@ -1,4 +1,10 @@
 {
+  "packages": {
+    "": {
+      "dependencies": {
+        "react-scripts": "^5.0.1"
+      }
+    },
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
