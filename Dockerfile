@@ -17,5 +17,5 @@ COPY my-app/ ./
 EXPOSE 8000
 
 # Define the command to run your application
-CMD ["sh", "-c","npm", "start"]
+CMD ["sh", "-c","npm","run", "start"]
 
