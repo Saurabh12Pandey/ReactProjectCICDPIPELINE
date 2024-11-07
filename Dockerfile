@@ -9,6 +9,6 @@ RUN npm install -g npm@10.9.0
 # Copy the rest of the application code to the working directory
 COPY my-app/ ./
 # Expose the application port
-EXPOSE 8000
+EXPOSE 3000
 # Start the application using 'serve'
-CMD ["npm", "start", "8000"]
+CMD ["npm", "start", "3000"]
